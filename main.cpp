@@ -41,7 +41,7 @@ int main()
             case '9':
                 exit(0);
             default:
-                cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
+                cout << endl << "There is no such option in the menu" << endl << endl;
                 system("pause");
                 break;
             }
