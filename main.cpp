@@ -52,7 +52,7 @@ int main()
             switch (choice)
             {
             case '1':
-  //              financialNinja.dodajAdresata();
+                financialNinja.wprowadzDate();
                 break;
             case '2':
  //               financialNinja.wyszukajAdresatowPoImieniu();

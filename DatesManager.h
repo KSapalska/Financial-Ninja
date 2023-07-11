@@ -15,6 +15,13 @@ class DatesManager
 
 public:
     int getCurrentDate();
+    string getCurrentYear();
+    string getCurrentMonth();
+    string getCurrentDay();
+    string convertDateFormat(string date);
+    bool checkDateFormat(string date);
+    bool checkNumberOfDays(int year, int month, int days);
+
     int enterNewDate();
 
 };
