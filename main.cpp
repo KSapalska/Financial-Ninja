@@ -5,38 +5,30 @@ using namespace std;
 
 int main()
 {
-
-    FinancialNinja financialNinja=FinancialNinja("users.xml");
+  FinancialNinja financialNinja("users.xml");
+   // FinancialNinja financialNinja=FinancialNinja("users.xml");
     char selectChoiceFromMainMenu();
     char selectChoiceFromUserMenu();
     char choice;
-/*
-
-    financialNinja.rejestracjaUzytkownika();
-    financialNinja.wypiszWszystkichUzytkownikow();
-    financialNinja.logowanieUzytkownika();
-    financialNinja.zmianaHaslaZalogowanegoUzytkownika();
-*/
-
 
 
    while(true)
    {
 
-        if (!financialNinja.czyUzytkownikJestZalogowany())
+        if (!financialNinja.isUserLoggedIn())
         {
             choice = selectChoiceFromMainMenu();
 
             switch (choice)
             {
             case '1':
-                financialNinja.rejestracjaUzytkownika();
+                financialNinja.registerUser();
                 break;
             case '2':
-                financialNinja.logowanieUzytkownika();
+                financialNinja.logIn();
                 break;
             case '3':
-                financialNinja.wypiszWszystkichUzytkownikow();
+                financialNinja.listAllUsers();
                 break;
             case '9':
                 exit(0);
@@ -52,26 +44,26 @@ int main()
             switch (choice)
             {
             case '1':
-                financialNinja.wprowadzDate();
+  //              financialNinja.addIncome();
                 break;
             case '2':
- //               financialNinja.wyszukajAdresatowPoImieniu();
+ //               financialNinja.addExpense();
                 break;
             case '3':
-     //           financialNinja.wyszukajAdresatowPoNazwisku();
+     //           financialNinja.printBalanceCurrentMonth();
                 break;
             case '4':
- //              financialNinja.wyswietlWszystkichAdresatow();
+ //              financialNinja.printBalanceLastMonth();
                               break;
             case '5':
-   //            financialNinja.usunAdresata();
+   //            financialNinja.printBalanceFromselectedPeriod();
 
                 break;
             case '6':
-              financialNinja.zmianaHaslaZalogowanegoUzytkownika();
+              financialNinja.changePasswordForLoggedUser();
                 break;
             case '7':
-               financialNinja.wylogowanieUzytkownika();
+               financialNinja.logOut();
                 break;
             }
           }
