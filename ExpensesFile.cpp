@@ -6,3 +6,16 @@ ExpensesFile::ExpensesFile(string filename)
 
 };
 
+
+void ExpensesFile::addExpenseToFile(Transaction transaction)
+{
+addTransactionToFile(transaction,getFileName());
+}
+
+
+vector<User> ExpensesFile::loadExpenseFromFile()
+{
+loadTransactionFromFile(getFileName());
+}
+
+

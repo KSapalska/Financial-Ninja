@@ -5,3 +5,14 @@ IncomesFile::IncomesFile(string filename)
 {
 
 };
+
+void IncomesFile::addIncomeToFile(Transaction transaction)
+{
+addTransactionToFile(transaction,getFileName());
+}
+
+
+vector<User> IncomesFile::loadIncomeFromFile()
+{
+loadTransactionFromFile(getFileName());
+}
