@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-  FinancialNinja financialNinja("users.xml");
+  FinancialNinja financialNinja("users.xml","incomes.xml","expenses.xml");
    // FinancialNinja financialNinja=FinancialNinja("users.xml");
     char selectChoiceFromMainMenu();
     char selectChoiceFromUserMenu();
@@ -44,7 +44,7 @@ int main()
             switch (choice)
             {
             case '1':
-  //              financialNinja.addIncome();
+                financialNinja.addIncome();
                 break;
             case '2':
  //               financialNinja.addExpense();

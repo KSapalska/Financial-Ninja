@@ -16,6 +16,9 @@ void TransactionFile::addTransactionToFile(Transaction transaction,string fileNa
     }
     xml.OutOfElem();
     xml.Save(fileName);
+
+    cout<<"haloto ja";
+    cin.get();
 }
 
 
